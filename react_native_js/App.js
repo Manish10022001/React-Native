@@ -1,6 +1,6 @@
 // import One from "./src/examples/One.js";
 import PressableComponent from "./src/examples/PressableComponent.js";
-import PizzaTranslator from "./src/components/PizzaTranslator";
+import ModalComponent from "./src/components/ModalComponent";
 export default function App() {
   return (
     // <One />
@@ -11,6 +11,7 @@ export default function App() {
     // <PizzaTranslator />
     // <ScrollViewEx />
     // <ButtonComponent />
-    <PressableComponent />
+    // <PressableComponent />
+    <ModalComponent />
   );
 }
