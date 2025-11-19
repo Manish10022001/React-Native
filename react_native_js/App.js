@@ -51,7 +51,8 @@ const styles= StyleSheet.create({
     // alignItems:"flex-end",
     // flexWrap:'nowrap',
     // flexWrap:'wrap',
-    flexWrap:"wrap-reverse",
+    alignContent:"space-around", //other values, flex-start, flex-end, cente, space-between, stretch, etc
+    flexWrap:"wrap",
     height:300,
     marginTop:60,
     borderWidth:6,
