@@ -38,8 +38,8 @@ export default function App() {
 
 const styles= StyleSheet.create({
   container:{
-    flex:1,
-    flexDirection:"column",
+    // flex:1,
+    // flexDirection:"column",
     // justifyContent:"flex-start",
     // justifyContent:"flex-end",
     // justifyContent:"center",
@@ -48,7 +48,11 @@ const styles= StyleSheet.create({
     //alignItems:"flex-start",
     // alignItems:"flex-end",
     // alignItems:"center",
-    alignItems:"flex-end",
+    // alignItems:"flex-end",
+    // flexWrap:'nowrap',
+    // flexWrap:'wrap',
+    flexWrap:"wrap-reverse",
+    height:300,
     marginTop:60,
     borderWidth:6,
     borderColor:"red",
