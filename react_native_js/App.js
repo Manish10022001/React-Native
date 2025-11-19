@@ -1,6 +1,6 @@
 // import One from "./src/examples/One.js";
 import PressableComponent from "./src/examples/PressableComponent.js";
-import ActivityIndicatorComponent from "./src/components/ActivityIndicatorComponent";
+import AlertComponent from "./src/components/AlertComponent";
 export default function App() {
   return (
     // <One />
@@ -14,6 +14,7 @@ export default function App() {
     // <PressableComponent />
     // <ModalComponent />
     // <StatusBarComponent />
-    <ActivityIndicatorComponent />
+    // <ActivityIndicatorComponent />
+    <Alert />
   );
 }
