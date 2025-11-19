@@ -25,7 +25,7 @@ export default function App() {
     // <ExampleShadow />
     // <StyleInheritance />
     <View style={styles.container}>
-      <Box style={{backgroundColor:"#681414ff"}}>Box 1</Box>
+      <Box style={{backgroundColor:"#681414ff", paddingVertical:100}}>Box 1</Box>
       <Box style={{backgroundColor:"#cec36eff"}}>Box 2</Box>
       <Box style={{backgroundColor:"#d689c4ff"}}>Box 3</Box>
       {/* <Box style={{backgroundColor:"#2a0958ff"}}>Box 4</Box>
@@ -39,11 +39,16 @@ export default function App() {
 const styles= StyleSheet.create({
   container:{
     flex:1,
-    flexDirection:"column",
+    flexDirection:"row",
     // justifyContent:"flex-start",
     // justifyContent:"flex-end",
     // justifyContent:"center",
-    justifyContent:"space-evenly",
+    // justifyContent:"space-evenly",
+    // alignItems:"stretch" //by default
+    //alignItems:"flex-start",
+    // alignItems:"flex-end",
+    // alignItems:"center",
+    alignItems:"baseline",
     marginTop:60,
     borderWidth:6,
     borderColor:"red",
