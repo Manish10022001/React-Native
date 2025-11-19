@@ -1,6 +1,7 @@
 // import One from "./src/examples/One.js";
 import PressableComponent from "./src/examples/PressableComponent.js";
-import ModalComponent from "./src/components/ModalComponent";
+import AlertComponent from "./src/components/AlertComponent";
+import BoxModel from "./src/StylesSheet/BoxModel";
 export default function App() {
   return (
     // <One />
@@ -12,6 +13,11 @@ export default function App() {
     // <ScrollViewEx />
     // <ButtonComponent />
     // <PressableComponent />
-    <ModalComponent />
+    // <ModalComponent />
+    // <StatusBarComponent />
+    // <ActivityIndicatorComponent />
+    // <Alert />
+    // <MultipleStyles />
+    <BoxModel />
   );
 }
