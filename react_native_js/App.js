@@ -1,7 +1,7 @@
 // import One from "./src/examples/One.js";
 import PressableComponent from "./src/examples/PressableComponent.js";
 import AlertComponent from "./src/components/AlertComponent";
-import MultipleStyles from "./src/StylesSheet/MultipleStyles";
+import BoxModel from "./src/StylesSheet/BoxModel";
 export default function App() {
   return (
     // <One />
@@ -17,6 +17,7 @@ export default function App() {
     // <StatusBarComponent />
     // <ActivityIndicatorComponent />
     // <Alert />
-    <MultipleStyles />
+    // <MultipleStyles />
+    <BoxModel />
   );
 }
