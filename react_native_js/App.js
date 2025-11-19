@@ -1,7 +1,7 @@
 // import One from "./src/examples/One.js";
 import PressableComponent from "./src/examples/PressableComponent.js";
 import AlertComponent from "./src/components/AlertComponent.js";
-import ExampleShadow from "./src/StylesSheet/ExampleShadow.js";
+import StyleInheritance from "./src/StylesSheet/StyleInheritance.js";
 import { View, Text } from "react-native";
 
 export default function App() {
@@ -21,9 +21,7 @@ export default function App() {
     // <Alert />
     // <MultipleStyles />
     // <BoxModel />
-    <ExampleShadow />
-    // <View>
-    //   <Text>HEllo world</Text>
-    // </View>
+    // <ExampleShadow />
+    <StyleInheritance />
   );
 }
