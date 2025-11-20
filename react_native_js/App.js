@@ -26,9 +26,9 @@ export default function App() {
     // <StyleInheritance />
     <View style={styles.container}>
       <Box style={{backgroundColor:"#681414ff", alignSelf:"flex-start"}}>Box 1</Box>
-      <Box style={{backgroundColor:"#cec36eff", alignSelf:"flex-end"}}>Box 2</Box>
-      <Box style={{backgroundColor:"#d689c4ff", alignSelf:"center"}}>Box 3</Box>
-      <Box style={{backgroundColor:"#2a0958ff", alignSelf:"stretch"}}>Box 4</Box>
+      <Box style={{backgroundColor:"#cec36eff"}}>Box 2</Box>
+      <Box style={{backgroundColor:"#d689c4ff", flexBasis:140, flex:1}}>Box 3</Box>
+      <Box style={{backgroundColor:"#2a0958ff", height:140, flex:1}}>Box 4</Box>
       <Box style={{backgroundColor:"#21732fff"}}>Box 5</Box>
       <Box style={{backgroundColor:"#0e0404ff"}}>Box 6</Box>
       <Box style={{backgroundColor:"#5c85c6ff"}}>Box 7</Box>
@@ -51,8 +51,8 @@ const styles= StyleSheet.create({
     // alignItems:"flex-end",
     // flexWrap:'nowrap',
     // flexWrap:'wrap',
-    alignContent:"space-around", //other values, flex-start, flex-end, cente, space-between, stretch, etc
-    flexWrap:"wrap",
+    // alignContent:"space-around", //other values, flex-start, flex-end, cente, space-between, stretch, etc
+    // flexWrap:"wrap",
     height:300,
     marginTop:60,
     borderWidth:6,
