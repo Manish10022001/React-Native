@@ -25,13 +25,13 @@ export default function App() {
     // <ExampleShadow />
     // <StyleInheritance />
     <View style={styles.container}>
-      <Box style={{backgroundColor:"#681414ff", flexShrink:1}}>Box 1 Shrink</Box>
-      <Box style={{backgroundColor:"#cec36eff", flexShrink:1}}>Box 2 Shrink</Box>
-      {/* <Box style={{backgroundColor:"#d689c4ff", flexBasis:140, flex:1}}>Box 3</Box>
-      <Box style={{backgroundColor:"#2a0958ff", height:140, flex:1}}>Box 4</Box>
+      <Box style={{backgroundColor:"#681414ff", top:75, left:75}}>Box 1 </Box>
+      <Box style={{backgroundColor:"#cec36eff", top:78, left:75}}>Box 2</Box>
+      <Box style={{backgroundColor:"#d689c4ff", position:'absolute', top:100, left:100}}>Box 3</Box>
+      <Box style={{backgroundColor:"#2a0958ff"}}>Box 4</Box>
       <Box style={{backgroundColor:"#21732fff"}}>Box 5</Box>
       <Box style={{backgroundColor:"#0e0404ff"}}>Box 6</Box>
-      <Box style={{backgroundColor:"#5c85c6ff"}}>Box 7</Box> */}
+      <Box style={{backgroundColor:"#5c85c6ff"}}>Box 7</Box>
     </View>
   );
 }
@@ -39,7 +39,7 @@ export default function App() {
 const styles= StyleSheet.create({
   container:{
     flex:1,
-    flexDirection:"row",
+    flexDirection:"column",
     // justifyContent:"flex-start",
     // justifyContent:"flex-end",
     // justifyContent:"center",
@@ -55,8 +55,8 @@ const styles= StyleSheet.create({
     // flexWrap:"wrap",
     // height:300,
     width:300,
-    marginTop:60,
-    borderWidth:6,
-    borderColor:"red",
+    // marginTop:60,
+    // borderWidth:6,
+    // borderColor:"red",
   }
 })
