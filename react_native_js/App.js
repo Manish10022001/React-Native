@@ -3,13 +3,16 @@ import {useState, useEffect} from 'react';
 import PressableComponent from "./src/examples/PressableComponent.js";
 import AlertComponent from "./src/components/AlertComponent.js";
 import StyleInheritance from "./src/StylesSheet/StyleInheritance.js";
-import { View, Text , StyleSheet, useWindowDimensions } from "react-native";
+import { View, Text , StyleSheet } from "react-native";
+import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context'
 import Box from "./src/RNLayout/Box.js";
 
 export default function App() {
-  const windowWidth = useWindowDimensions().width;
-  const windowHeight = useWindowDimensions().height;
+  // const windowWidth = useWindowDimensions().width;
+  // const windowHeight = useWindowDimensions().height;
   return (
+    <SafeAreaProvider>
+    <SafeAreaView style={{flex:1}}>
     <View style={styles.container}>
       {/* <One /> */}
       {/* <JsxExampleCat /> */}
@@ -39,13 +42,12 @@ export default function App() {
          <Box style={{ backgroundColor:"#5c85c6ff" }}>Box 7</Box> */}
       {/*</View>*/}
 
-        <View style={[styles.box,{
-          width:windowWidth>500?'70%':'90%',
-           height:windowHeight>500?'70%':'90%'}]}>
-          <Text style={{fontSize:windowWidth>500?74:20}}>Welcome !</Text>
+        <View style={styles.box}>
+          <Text style={styles.text}>Welcome !</Text>
         </View>
       </View>
-    
+    </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 
@@ -58,13 +60,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   box:{
-    // width:windowWidth > 500 ? '50%' : '70%',
-    // height:windowHeight > 500 ? '50%':'70%',
     backgroundColor:'lightblue',
     alignItems:'center',
     justifyContent:'center'
   },
-  // text:{
-  //   fontSize:windowWidth>500? 54: 24,
-  // }
+  text:{
+    fontSize:24,
+  }
 });
