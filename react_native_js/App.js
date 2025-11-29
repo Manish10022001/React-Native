@@ -3,9 +3,10 @@ import {useState, useEffect} from 'react';
 import PressableComponent from "./src/examples/PressableComponent.js";
 import AlertComponent from "./src/components/AlertComponent.js";
 import StyleInheritance from "./src/StylesSheet/StyleInheritance.js";
-import { View, Text , StyleSheet } from "react-native";
+import { View, Text , StyleSheet, Platform } from "react-native";
 import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context'
 import Box from "./src/RNLayout/Box.js";
+import CustomButton from './src/DynamicUI/CustomButton';
 
 export default function App() {
   // const windowWidth = useWindowDimensions().width;
@@ -45,6 +46,7 @@ export default function App() {
         <View style={styles.box}>
           <Text style={styles.text}>Welcome !</Text>
         </View>
+        <CustomButton title="press me" onPress={()=>alert("Pressed")}/>
       </View>
     </SafeAreaView>
     </SafeAreaProvider>
@@ -58,13 +60,25 @@ const styles = StyleSheet.create({
     backgroundColor: "plum",
     alignItems: "center",
     justifyContent: "center",
+    paddintTop: Platform.OS === "android" ? 25:0,
   },
   box:{
     backgroundColor:'lightblue',
     alignItems:'center',
-    justifyContent:'center'
+    justifyContent:'center',
   },
   text:{
-    fontSize:24,
+    ...Platform.select({
+      ios:{
+        color:'purple',
+        fontSize:24,
+        fontStyle: 'italic',
+      },
+      android:{
+        fontSize:34,
+        fontStyle:'bold',
+        color:'red',
+      }
+    }),
   }
 });
