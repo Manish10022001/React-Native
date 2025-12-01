@@ -1,0 +1,29 @@
+import {useState} from 'react';
+import { StyleSheet, Text, TextInput, View, StatusBar} from 'react-native';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+
+export default function App() {
+  const [name, setName] = useState('')
+  return (
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.container}>
+        <TextInput style={styles.input} onChangeText={setName}/>
+        <Text style={{fontSize:30}}>My name is {name}</Text>
+      </SafeAreaView>
+    </SafeAreaProvider>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    paddingTop:StatusBar.currentHeight,
+  },
+  input:{
+    height:40,
+    margin:12,
+    borderWidth:1,
+    padding:10
+  }
+});
