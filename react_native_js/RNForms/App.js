@@ -1,9 +1,10 @@
 import {useState} from 'react';
-import { StyleSheet, Text, TextInput, View, StatusBar} from 'react-native';
+import { StyleSheet, Text, TextInput, View, StatusBar, Switch } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 export default function App() {
   const [name, setName] = useState('')
+  const [isDarkMode, setIsDarkMode] = useState(false)
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
@@ -23,6 +24,16 @@ export default function App() {
           multiline
         />
         <Text style={styles.text}>My name is {name}</Text>
+
+        <View style={styles.switchContainer}>
+          <Text style={styles.text}>Dark Mode</Text>
+          <Switch 
+            value={isDarkMode}
+            onValueChange={()=> setIsDarkMode((previousState)=>!previousState)}
+            trackColor={{false:"gray", true:"lightblue"}}
+            thumbCOlor="yellow"
+          />
+        </View>
       </SafeAreaView>
     </SafeAreaProvider>
   );
@@ -47,5 +58,12 @@ const styles = StyleSheet.create({
   multilineText:{
     minHeight:100,
     textAlignVertical:"top"
+  },
+  switchContainer:{
+    flexDirection:"row",
+    alignItems:"center",
+    justifyContent:"space-between",
+    paddingTop:10,
+    paddingHorizontal:10
   }
 });
