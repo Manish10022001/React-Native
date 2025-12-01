@@ -7,8 +7,17 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
-        <TextInput style={styles.input} onChangeText={setName}/>
-        <Text style={{fontSize:30}}>My name is {name}</Text>
+        <TextInput 
+          style={styles.input} 
+          value={name} 
+          onChangeText={setName}
+          placeholder="email@example.com"
+          secureTextEntry
+          // keyboardType="numeric"
+          autoCorrect={false}
+          autoCapitalize="none"
+        />
+        <Text style={styles.text}>My name is {name}</Text>
       </SafeAreaView>
     </SafeAreaProvider>
   );
@@ -24,6 +33,10 @@ const styles = StyleSheet.create({
     height:40,
     margin:12,
     borderWidth:1,
+    padding:10
+  },
+  text:{
+    fontSize:30,
     padding:10
   }
 });
