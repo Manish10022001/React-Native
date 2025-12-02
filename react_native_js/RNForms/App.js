@@ -20,6 +20,7 @@ export default function App() {
   function handleSubmit(){
     if(validateForm()){
         console.log("Submitted", username, password);
+        alert("Form Submitted Successfully")
         //after submit reset all values
         setUsername("");
         setPassword("");
