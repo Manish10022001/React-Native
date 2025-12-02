@@ -5,6 +5,7 @@ import GetRequests from './components/GetRequests';
 import LoadingState from './components/LoadingState';
 import PullToRefresh from './components/PullToRefresh';
 import PostTitleBody from './components/PostTitleBody';
+import ErrorHandling from './components/ErrorHandling';
 
 export default function App() {
   return (
@@ -13,7 +14,8 @@ export default function App() {
         {/* <GetRequests /> */}
         {/* <LoadingState /> */}
         {/* <PullToRefresh /> */}
-        <PostTitleBody />
+        {/* <PostTitleBody /> */}
+        <ErrorHandling />
       </SafeAreaView>
     </SafeAreaProvider>
   );
