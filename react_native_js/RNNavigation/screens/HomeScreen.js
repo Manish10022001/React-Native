@@ -7,7 +7,7 @@ export default function HomeScreen({navigation, route}){ //2.navigation prop //3
             {/* 3.4.3 text component which renders result */}
             <Text style={styles.text}>{route.params?.result}</Text>
             <Button title="Go to About" onPress={()=>navigation.navigate("About",{
-               // name:"Manish" //3.1
+               name:"Manish" //3.1 //also in 5.1
             })}/>
         </View>
     )

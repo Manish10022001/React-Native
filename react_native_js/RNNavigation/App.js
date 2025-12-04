@@ -21,6 +21,11 @@ import AboutScreen from './screens/AboutScreen'
 //-> 4.4 screen to have a shade of header color
 
 //-> 4.5 to have uniform screen across all screns copy all optons and in <Stact.Navigation in ScreenOptions paste it
+
+//5: Dynamic Stack Navigation e.g instead of generic title, want name of person passed in as parameter
+//->5.1 Dynamically set header title directly from <Stack.screen>
+//->5.2 Can use useLayoutEffect hook to set dynamic title
+
 const Stack = createNativeStackNavigator(); //1 import createNativeStackNavigator
 export default function App() {
   return (
@@ -76,6 +81,12 @@ export default function App() {
         <Stack.Screen name="About" 
                       component={AboutScreen} 
                       initialParams={{name:"Guest"}} //3.2 initialParams prop
+                      //5.1
+                      options={({route})=>(
+                        {
+                          title:route.params.name,
+                        }
+                      )}
         /> 
       </Stack.Navigator>
     </NavigationContainer>
