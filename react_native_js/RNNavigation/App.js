@@ -1,31 +1,28 @@
-import {StyleSheet} from 'react-native'
 import {NavigationContainer} from '@react-navigation/native'
-import DashboardScreen from './screens/DashboardScreen'
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
+import {StyleSheet} from 'react-native'
+import CourseListScreen from './screens/CourseListScreen'
+import ProfileScreen from './screens/ProfileScreen'
 import SettingScreen from './screens/SettingScreen'
-
-import { createDrawerNavigator } from '@react-navigation/drawer';
-//2: to navigate programetically without drawer
-//-> 2.1: using toggleDrawer and destructureing navigation
-const Drawer = createDrawerNavigator();
+import { Ionicons } from '@expo/vector-icons'; 
+const Tab = createBottomTabNavigator()
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator>
-      <Drawer.Screen 
-        name='Dashboard' 
-        component={DashboardScreen} 
-        options = {{
-          title:"My Dashboard",
-          drawerLabel:"Dashboard label",
-          drawerActiveTintColor:"#c12121ff",
-          drawerActiveBackgroundColor:"lightblue",
-          drawerContentStyle:{
-            backgroundColor:"lightpink"
-          }
-        }}
-      />
-      <Drawer.Screen name='Setting' component={SettingScreen} />
-    </Drawer.Navigator>
+        <Tab.Navigator screenOptions={{
+            tabBarLabelPosition:"below-icon", //or beside-icon
+            tabBarShowLabel:true, //or false
+            tabBarActiveTintColor:"purple",
+            tabBarInactiveTintColor:"blue"
+        }}>
+            <Tab.Screen name="Course List" component={CourseListScreen}/>
+            <Tab.Screen name="Profile" component={ProfileScreen} options={{
+                tabBarLabel:"my profile",
+                tabBarIcon:({color})=><Ionicons name="person" size={20} color={color}/>,
+                tabBarBadge:3
+            }}/>
+            <Tab.Screen name="Setting" component={SettingScreen} />
+        </Tab.Navigator>
     </NavigationContainer>
   );
 }
