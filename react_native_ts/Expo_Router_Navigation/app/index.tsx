@@ -1,5 +1,6 @@
 import { Text, View } from "react-native";
-
+import {StatusBar} from "expo-status-bar"
+import { Link } from "expo-router";
 export default function Index() {
   return (
     <View
@@ -10,6 +11,8 @@ export default function Index() {
       }}
     >
       <Text>Index Page</Text>
+      <StatusBar style="auto"/>
+      <Link href={"/setting"}>Go to settings</Link>
     </View>
   );
 }

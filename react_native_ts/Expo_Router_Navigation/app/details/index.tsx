@@ -1,3 +1,5 @@
+import { Link } from "expo-router";
+import { StatusBar } from "expo-status-bar";
 import { Text, View } from "react-native";
 //create route for details page eg. localhost:8081/details
 export default function Details(){
@@ -8,6 +10,8 @@ export default function Details(){
             alignItems:"center"
         }}>
             <Text>Details Page</Text>
+            <StatusBar style="auto"/>
+            <Link href={{pathname:"/"}}>Go home</Link>
         </View>
     )
 }
