@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "react_native_galaxies_ts",
-    "slug": "react_native_galaxies_ts",
+    "name": "Expo_Router_Navigation",
+    "slug": "Expo_Router_Navigation",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "reactnativegalaxiests",
+    "scheme": "exporouternavigation",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
