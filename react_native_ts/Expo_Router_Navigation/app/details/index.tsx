@@ -11,7 +11,7 @@ export default function Details(){
         }}>
             <Text>Details Page</Text>
             <StatusBar style="auto"/>
-            <Link href={{pathname:"/"}}>Go home</Link>
+            <Link href={{pathname:"/details/test"}}>Test Page</Link>
         </View>
     )
 }
