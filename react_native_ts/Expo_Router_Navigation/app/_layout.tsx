@@ -41,6 +41,31 @@ export default function RootLayout() {
         options={{ title: "Home Page", headerLeft: undefined }} //added headerLeft property to undefined to clear back button or array from home scrren
       />
       <Stack.Screen name="setting" options={{ title: "Setting Page" }} />
+      {/* to customize header on the screen individually, we need to customize
+      its options property on Stack.Screen, all optsion from Stack can be written in stack.screen and it will 
+      override the global options */}
+      <Stack.Screen
+        name="details"
+        options={({ navigation }) => ({
+          title: "Details Page",
+          headerStyle: {
+            backgroundColor: "green",
+          },
+          headerTintColor: "yellow",
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
+          // to customize back button in header globally, use headerLeft in which render custom component
+          headerLeft: () => (
+            <Pressable
+              onPress={() => navigation.popToTop()} //popToTop navigates to Home screen
+              style={{ marginRight: 10 }}
+            >
+              <Text style={{ color: "blue", fontSize: 16 }}>Back</Text>
+            </Pressable>
+          ),
+        })}
+      />
     </Stack>
   );
 }
