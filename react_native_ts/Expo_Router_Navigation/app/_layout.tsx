@@ -44,6 +44,8 @@ export default function RootLayout() {
       {/* to customize header on the screen individually, we need to customize
       its options property on Stack.Screen, all optsion from Stack can be written in stack.screen and it will 
       override the global options */}
+
+      {/* can also customize header withing the route component using the useNavigation hook */}
       <Stack.Screen
         name="details"
         options={({ navigation }) => ({
